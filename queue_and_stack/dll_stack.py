@@ -1,18 +1,22 @@
 import sys
-sys.path.append('../doubly_linked_list')
 from doubly_linked_list import DoublyLinkedList
+
 
 class Stack:
     def __init__(self):
+        super(DoublyLinkedList)
         self.size = 0
         # Why is our DLL a good choice to store our elements?
+
+        # You can iterate forwards and backwards through a DLL. The tradeoff is that it uses more memory than a SLL.
+
         # self.storage = ?
 
     def push(self, value):
-        pass
+        DoublyLinkedList.add_to_tail(self, value)
 
     def pop(self):
-        pass
+        DoublyLinkedList.remove_from_head(self)
 
     def len(self):
-        pass
+        return DoublyLinkedList(self).length
